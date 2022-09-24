@@ -1,0 +1,30 @@
+Install
+Download and extract the installer package
+Execute traccar.run file
+sudo ./traccar.run
+Start systemd service
+sudo systemctl start traccar
+Uninstall
+Stop systemd service
+sudo systemctl stop traccar
+Remove systemd service
+sudo systemctl disable traccar
+sudo rm /etc/systemd/system/traccar
+sudo systemctl daemon-reload
+Remove traccar directory
+sudo rm -R /opt/traccar
+
+
+
+
+Change line:
+ExecStart=/opt/traccar/jre/bin/java -jar tracker-server.jar conf/traccar.xml
+To:
+ExecStart=/opt/traccar/jre/bin/java -Djdk.tls.client.protocols=TLSv1.2 -jar tracker-server.jar conf/traccar.xml
+
+sudo ufw allow 9980/udp
+sudo ufw allow 9980/tcp
+sudo ufw allow 9990/udp
+sudo ufw allow 9990/tcp
+sudo ufw allow 9981/udp
+sudo ufw allow 9981/tcp
