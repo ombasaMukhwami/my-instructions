@@ -1,0 +1,239 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd"
+  logicalFilePath="changelog-1.1">
+
+  <changeSet author="author" id="changelog-1.1">
+
+    <createTable tableName="devices">
+      <column name="id" type="INT" autoIncrement="true">
+        <constraints primaryKey="true" />
+      </column>
+      <column name="name" type="VARCHAR(128)">
+        <constraints nullable="false" />
+      </column>
+      <column name="uniqueid" type="VARCHAR(128)">
+        <constraints nullable="false" unique="true" />
+      </column>
+      <column name="lastupdate" type="timestamp" />
+      <column name="positionid" type="INT" />
+      <column name="groupid" type="INT" />
+      <column name="attributes" type="VARCHAR(4000)" />
+      <column name="phone" type="VARCHAR(128)" />
+      <column name="model" type="VARCHAR(128)" />
+      <column name="contact" type="VARCHAR(512)" />
+      <column name="category" type="VARCHAR(128)" />
+      <column name="disabled" type="BOOLEAN" defaultValueBoolean="false" />
+    </createTable>
+    <createTable tableName="positions">
+      <column name="id" type="INT" autoIncrement="true">
+        <constraints primaryKey="true" />
+      </column>
+      <column name="protocol" type="VARCHAR(128)" />
+      <column name="deviceid" type="INT">
+        <constraints nullable="false" />
+      </column>
+      <column name="servertime" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+        <constraints nullable="false" />
+      </column>
+      <column name="devicetime" type="TIMESTAMP">
+        <constraints nullable="false" />
+      </column>
+      <column name="fixtime" type="TIMESTAMP">
+        <constraints nullable="false" />
+      </column>
+      <column name="valid" type="BOOLEAN">
+        <constraints nullable="false" />
+      </column>
+      <column name="latitude" type="DOUBLE">
+        <constraints nullable="false" />
+      </column>
+      <column name="longitude" type="DOUBLE">
+        <constraints nullable="false" />
+      </column>
+      <column name="altitude" type="FLOAT">
+        <constraints nullable="false" />
+      </column>
+      <column name="speed" type="FLOAT">
+        <constraints nullable="false" />
+      </column>
+      <column name="course" type="FLOAT">
+        <constraints nullable="false" />
+      </column>
+      <column name="address" type="VARCHAR(512)" />
+      <column name="attributes" type="VARCHAR(4000)" />
+      <column name="accuracy" type="DOUBLE" defaultValueNumeric="0">
+        <constraints nullable="false" />
+      </column>
+      <column name="network" type="VARCHAR(4000)" />
+    </createTable>
+    <createTable tableName="users">
+      <column name="id" type="INT" autoIncrement="true">
+        <constraints primaryKey="true" />
+      </column>
+      <column name="name" type="VARCHAR(128)">
+        <constraints nullable="false" />
+      </column>
+      <column name="email" type="VARCHAR(128)">
+        <constraints nullable="false" unique="true" />
+      </column>
+      <column name="hashedpassword" type="VARCHAR(128)" />
+      <column name="salt" type="VARCHAR(128)" />
+      <column name="readonly" type="BOOLEAN" defaultValueBoolean="false">
+        <constraints nullable="false" />
+      </column>
+      <column name="administrator" type="BOOLEAN" />
+      <column name="map" type="VARCHAR(128)" />
+      <column name="latitude" type="DOUBLE" defaultValueNumeric="0">
+        <constraints nullable="false" />
+      </column>
+      <column name="longitude" type="DOUBLE" defaultValueNumeric="0">
+        <constraints nullable="false" />
+      </column>
+      <column name="zoom" type="INT" defaultValueNumeric="0">
+        <constraints nullable="false" />
+      </column>
+      <column name="twelvehourformat" type="BOOLEAN" defaultValueBoolean="false">
+        <constraints nullable="false" />
+      </column>
+      <column name="attributes" type="VARCHAR(4000)" />
+      <column name="coordinateformat" type="VARCHAR(128)" />
+      <column name="disabled" type="BOOLEAN" defaultValueBoolean="false" />
+      <column name="expirationtime" type="timestamp" />
+      <column name="devicelimit" type="INT" defaultValueNumeric="-1" />
+      <column name="token" type="VARCHAR(128)" />
+      <column name="userlimit" type="INT" defaultValueNumeric="0" />
+      <column name="devicereadonly" type="BOOLEAN" defaultValueBoolean="false" />
+      <column name="phone" type="VARCHAR(128)" />
+      <column name="limitcommands" type="BOOLEAN" defaultValueBoolean="false" />
+      <column name="login" type="VARCHAR(128)" />
+      <column name="poilayer" type="VARCHAR(512)" />
+    </createTable>
+    <createTable tableName="user_device">
+      <column name="id" type="INT" autoIncrement="true">
+        <constraints primaryKey="true" />
+      </column>
+      <column name="userid" type="INT">
+        <constraints nullable="false" />
+      </column>
+      <column name="deviceid" type="INT">
+        <constraints nullable="false" />
+      </column>
+    </createTable>
+    <createTable tableName="user_user">
+      <column name="id" type="INT" autoIncrement="true">
+        <constraints primaryKey="true" />
+      </column>
+      <column name="userid" type="INT">
+        <constraints nullable="false" />
+      </column>
+      <column name="manageduserid" type="INT">
+        <constraints nullable="false" />
+      </column>
+    </createTable>
+    <createTable tableName="commands">
+      <column autoIncrement="true" name="id" type="INT">
+        <constraints primaryKey="true" />
+      </column>
+      <column name="description" type="VARCHAR(4000)">
+        <constraints nullable="false" />
+      </column>
+      <column name="type" type="VARCHAR(128)">
+        <constraints nullable="false" />
+      </column>
+      <column name="textchannel" type="BOOLEAN" defaultValueBoolean="false">
+        <constraints nullable="false" />
+      </column>
+      <column name="attributes" type="VARCHAR(4000)">
+        <constraints nullable="false" />
+      </column>
+    </createTable>
+    <createTable tableName="device_command">
+      <column name="id" type="INT" autoIncrement="true">
+        <constraints primaryKey="true" />
+      </column>
+      <column name="deviceid" type="INT">
+        <constraints nullable="false" />
+      </column>
+      <column name="commandid" type="INT">
+        <constraints nullable="false" />
+      </column>
+    </createTable>
+    <createTable tableName="attributes">
+      <column autoIncrement="true" name="id" type="INT">
+        <constraints primaryKey="true" />
+      </column>
+      <column name="description" type="VARCHAR(4000)">
+        <constraints nullable="false" />
+      </column>
+      <column name="type" type="VARCHAR(128)">
+        <constraints nullable="false" />
+      </column>
+      <column name="attribute" type="VARCHAR(128)">
+        <constraints nullable="false" />
+      </column>
+      <column name="expression" type="VARCHAR(4000)">
+        <constraints nullable="false" />
+      </column>
+    </createTable>
+    <createTable tableName="device_attribute">
+      <column autoIncrement="true" name="id" type="INT">
+        <constraints primaryKey="true" />
+      </column>
+      <column name="deviceid" type="INT">
+        <constraints nullable="false" />
+      </column>
+      <column name="attributeid" type="INT">
+        <constraints nullable="false" />
+      </column>
+    </createTable>
+    <createTable tableName="user_attribute">
+      <column autoIncrement="true" name="id" type="INT">
+        <constraints primaryKey="true" />
+      </column>
+      <column name="userid" type="INT">
+        <constraints nullable="false" />
+      </column>
+      <column name="attributeid" type="INT">
+        <constraints nullable="false" />
+      </column>
+    </createTable>
+    <createTable tableName="user_command">
+      <column name="id" type="INT" autoIncrement="true">
+        <constraints primaryKey="true" />
+      </column>
+      <column name="userid" type="INT">
+        <constraints nullable="false" />
+      </column>
+      <column name="commandid" type="INT">
+        <constraints nullable="false" />
+      </column>
+    </createTable>
+    <addForeignKeyConstraint baseTableName="positions" baseColumnNames="deviceid" constraintName="fk_position_deviceid" onDelete="CASCADE" referencedColumnNames="id" referencedTableName="devices" />
+    <addForeignKeyConstraint baseTableName="user_device" baseColumnNames="deviceid" constraintName="fk_user_device_deviceid" onDelete="CASCADE" referencedColumnNames="id" referencedTableName="devices" />
+    <addForeignKeyConstraint baseTableName="user_device" baseColumnNames="userid" constraintName="fk_user_device_userid" onDelete="CASCADE" referencedColumnNames="id" referencedTableName="users" />
+    <addForeignKeyConstraint baseTableName="user_user" baseColumnNames="userid" constraintName="fk_user_user_userid" onDelete="CASCADE" referencedColumnNames="id" referencedTableName="users" />
+    <addForeignKeyConstraint baseTableName="user_attribute" baseColumnNames="attributeid" constraintName="fk_user_attribute_attributeid" onDelete="CASCADE" referencedColumnNames="id" referencedTableName="attributes" />
+    <addForeignKeyConstraint baseTableName="user_attribute" baseColumnNames="userid" constraintName="fk_user_attribute_userid" onDelete="CASCADE" referencedColumnNames="id" referencedTableName="users" />
+    <addForeignKeyConstraint baseTableName="device_command" baseColumnNames="commandid" constraintName="fk_device_command_commandid" onDelete="CASCADE" referencedColumnNames="id" referencedTableName="commands" />
+    <addForeignKeyConstraint baseTableName="device_command" baseColumnNames="deviceid" constraintName="fk_device_command_deviceid" onDelete="CASCADE" referencedColumnNames="id" referencedTableName="devices" />
+    <addForeignKeyConstraint baseTableName="user_command" baseColumnNames="commandid" constraintName="fk_user_command_commandid" onDelete="CASCADE" referencedColumnNames="id" referencedTableName="commands" />
+    <addForeignKeyConstraint baseTableName="user_command" baseColumnNames="userid" constraintName="fk_user_command_userid" onDelete="CASCADE" referencedColumnNames="id" referencedTableName="users" />
+    <addForeignKeyConstraint baseTableName="device_attribute" baseColumnNames="attributeid" constraintName="fk_user_device_attribute_attributeid" onDelete="CASCADE" referencedColumnNames="id" referencedTableName="attributes" />
+    <addForeignKeyConstraint baseTableName="device_attribute" baseColumnNames="deviceid" constraintName="fk_user_device_attribute_deviceid" onDelete="CASCADE" referencedColumnNames="id" referencedTableName="devices" />
+
+
+    <insert tableName="users">
+      <column name="name" value="admin" />
+      <column name="email" value="admin" />
+      <column name="hashedpassword" value="D33DCA55ABD4CC5BC76F2BC0B4E603FE2C6F61F4C1EF2D47" />
+      <column name="salt" value="000000000000000000000000000000000000000000000000" />
+      <column name="administrator" valueBoolean="true" />
+    </insert>
+    
+  </changeSet>
+
+</databaseChangeLog>

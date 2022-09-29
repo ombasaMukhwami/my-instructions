@@ -1,0 +1,52 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd"
+  logicalFilePath="changelog-1.0">
+
+  <changeSet author="author" id="changelog-1.0">
+    <createTable tableName="servers">
+      <column name="id" type="INT" autoIncrement="true">
+        <constraints primaryKey="true" />
+      </column>
+      <column name="registration" type="BOOLEAN" defaultValueBoolean="true">
+        <constraints nullable="false" />
+      </column>
+      <column name="latitude" type="DOUBLE" defaultValueNumeric="0">
+        <constraints nullable="false" />
+      </column>
+      <column name="longitude" type="DOUBLE" defaultValueNumeric="0">
+        <constraints nullable="false" />
+      </column>
+      <column name="zoom" type="INT" defaultValueNumeric="0">
+        <constraints nullable="false" />
+      </column>
+      <column name="map" type="VARCHAR(128)" />
+      <column name="bingkey" type="VARCHAR(128)" />
+      <column name="mapurl" type="VARCHAR(512)" />
+      <column name="readonly" type="BOOLEAN" defaultValueBoolean="false">
+        <constraints nullable="false" />
+      </column>
+      <column name="twelvehourformat" type="BOOLEAN" defaultValueBoolean="false">
+        <constraints nullable="false" />
+      </column>
+      <column name="attributes" type="VARCHAR(4000)" />
+      <column name="forcesettings" type="BOOLEAN" defaultValueBoolean="false">
+        <constraints nullable="false" />
+      </column>
+      <column name="coordinateformat" type="VARCHAR(128)" />
+      <column name="devicereadonly" type="BOOLEAN" defaultValueBoolean="false" />
+      <column name="limitcommands" type="BOOLEAN" defaultValueBoolean="false" />
+      <column name="poilayer" type="VARCHAR(512)" />
+    </createTable>
+    <insert tableName="servers">
+      <column name="registration" valueBoolean="true" />
+      <column name="latitude" valueNumeric="0" />
+      <column name="longitude" valueNumeric="0" />
+      <column name="zoom" valueNumeric="0" />
+    </insert>
+  </changeSet>
+
+</databaseChangeLog>

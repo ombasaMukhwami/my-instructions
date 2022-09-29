@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!DOCTYPE properties SYSTEM 'http://java.sun.com/dtd/properties.dtd'>
+
+<properties>
+
+    <!--
+
+    DO NOT MODIFY THIS FILE. Use traccar.xml instead.
+
+    -->
+
+    <entry key='web.port'>8082</entry>
+    <entry key='web.path'>./web</entry>
+
+    <entry key='geocoder.enable'>false</entry>
+    <entry key='geocoder.type'>google</entry>
+
+    <entry key='logger.level'>info</entry>
+    <entry key='logger.file'>./logs/tracker-server.log</entry>
+    <entry key='logger.rotate'>true</entry>
+
+    <entry key='filter.enable'>true</entry>
+    <entry key='filter.future'>86400</entry>
+
+    <entry key='event.ignoreDuplicateAlerts'>true</entry>
+    <entry key='processing.computedAttributes.enable'>true</entry>
+    <entry key='processing.engineHours.enable'>true</entry>
+
+    <entry key='media.path'>./media</entry>
+
+    <entry key='notificator.types'>web,mail</entry>
+
+    <entry key='server.statistics'>https://www.traccar.org/analytics/</entry>
+
+    <entry key='commands.queueing'>true</entry>
+
+    <entry key='forward.enable'>true</entry>
+    <entry key='filter.past'>5256000</entry>
+    <entry key='database.savePosition'>false</entry>
+    <entry key='database.saveEvent'>false</entry>
+    <entry key='database.registerUnknown'>true</entry>
+    <entry key='database.saveOriginal'>false</entry>
+
+    <!-- RabbitMQ Configs -->
+    <entry key='rabbitMq.hostname'>127.0.0.1</entry>
+    <entry key='rabbitMq.username'>guest</entry>
+    <entry key='rabbitMq.password'>guest</entry>
+    <entry key='rabbitMq.queue'>socket-direct-queue</entry>
+    <entry key='rabbitMq.exchange'>socket-direct-exchange</entry>
+    <entry key='rabbitMq.routingKey'>socket.init</entry>
+    <entry key='rabbitMq.durable'>true</entry>
+
+    <entry key='database.ignoreUnknown'>true</entry>
+    <entry key='database.generateQueries'>true</entry>
+    <entry key='database.changelog'>./schema/changelog-master.xml</entry>
+ 
+    <entry key='database.loginUser'>
+        SELECT * FROM users
+        WHERE email = :email OR login = :email
+    </entry>
+
+    <entry key='database.selectPositions'>
+        SELECT * FROM positions WHERE deviceId = :deviceId AND fixTime BETWEEN :from AND :to ORDER BY fixTime
+    </entry>
+
+    <entry key='database.selectLatestPositions'>
+        SELECT p.* FROM positions p INNER JOIN devices d ON p.id = d.positionid;
+    </entry>
+
+    <entry key='database.updateLatestPosition'>
+        UPDATE devices SET positionId = :id WHERE id = :deviceId
+    </entry>
+
+    <entry key='lpg.port'>9990</entry>
+
+</properties>
