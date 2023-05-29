@@ -1,0 +1,95 @@
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+
+services:
+  adminstrative:
+    image: trackingapp/trackingadministrativeapi:latest
+    labels:
+      - traefik.http.routers.adminstrative.rule=Host(`adminstrative.trackupsolutions.com`)
+      - traefik.http.routers.adminstrative.tls=true
+      - traefik.http.routers.adminstrative.tls.certresolver=lets-encrypt
+      - traefik.port=80
+    networks:
+      - internal
+      - web
+
+==============================================================================================
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+
+services:
+  site_name:
+    image: trackingapp/fleet2:latest
+    labels:
+      - traefik.http.routers.site_name.rule=Host(`fleet.riverlong.com`)
+      - traefik.http.routers.site_name.tls=true
+      - traefik.http.routers.site_name.tls.certresolver=lets-encrypt
+      - traefik.port=80
+    networks:
+      - internal
+      - web	  
+=================================================================================================
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+
+services:
+  fleet:
+    image: trackingapp/fleet0:latest
+    labels:
+      - traefik.http.routers.fleet.rule=Host(`fleet.site_name.com`)
+      - traefik.http.routers.fleet.tls=true
+      - traefik.http.routers.fleet.tls.certresolver=lets-encrypt
+      - traefik.port=80
+    networks:
+      - internal
+      - web
+=====================================================================================================
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+
+services:
+  riverlong:
+    image: trackingapp/fleet2:latest
+    labels:
+      - traefik.http.routers.site_name.rule=Host(`fleet.site_name.com`)
+      - traefik.http.routers.site_name.tls=true
+      - traefik.http.routers.site_name.tls.certresolver=lets-encrypt
+      - traefik.port=80
+    networks:
+      - internal
+      - web
+=======================================================================================================
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+
+services:
+  trace:
+    image: trackingapp/trace:latest
+    labels:
+      - traefik.http.routers.trace.rule=Host(`limiter.site_name.co.ke`)
+      - traefik.http.routers.trace.tls=true
+      - traefik.http.routers.trace.tls.certresolver=lets-encrypt
+      - traefik.port=80
+    networks:
+      - internal
+      - web
