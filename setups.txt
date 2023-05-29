@@ -1,0 +1,1021 @@
+ 996  ls
+  997  cd release
+  998  ls
+  999  nano docker-compose.yml
+ 1000  docker pull trackingapp/fleet2
+ 1001  docker ps
+ 1002  docker stop a2b4adefe05d
+ 1003  docker-compose up
+ 1004  docker ps
+ 1005  docker pull trackingapp/trackingreportingapi
+ 1006  cd trackingapps
+ 1007  ls
+ 1008  cd reports
+ 1009  ls
+ 1010  docker-compose up
+ 1011  cd trackingapps
+ 1012  cd reports
+ 1013  ls
+ 1014  docker-compose up
+ 1015  docker ps
+ 1016  ls
+ 1017  cd trackingapps
+ 1018  ls
+ 1019  cd reports
+ 1020  ls
+ 1021  docker-compose up
+ 1022  ls
+ 1023  cd trackingapps
+ 1024  ls
+ 1025  cd reports
+ 1026  ls
+ 1027  docker ps
+ 1028  docker pull  trackingapp/trackingreportingapi:latest
+ 1029  docker stop 9d053f50b965
+ 1030  docker-compose up
+ 1031  docker pull trackigapp/fleet2
+ 1032  docker pull trackingapp/fleet2
+ 1033  cd trackingapps
+ 1034  ls
+ 1035  cd client/release
+ 1036  ls
+ 1037  docker ps
+ 1038  docker stop 766007facb59
+ 1039  docker-compose up
+ 1040  docker ps
+ 1041  docker stop 5c9a9d6a3542
+ 1042  docker stop 34658490e80d
+ 1043  docker ps
+ 1044  cd trackingapps
+ 1045  ls
+ 1046  cd ntsa
+ 1047  ls
+ 1048  docker-compose up
+ 1049  cd trackingapps
+ 1050  ls
+ 1051  cd ntsaapp
+ 1052  ls
+ 1053  docker-compose up
+ 1054  docker ps
+ 1055  cd trackingapp
+ 1056  cd trackingapps
+ 1057  ls
+ 1058  cd ntsaapp
+ 1059  ls
+ 1060  nano docker-compose.yml
+ 1061  docker pull trackingapp/trackingntsaapi
+ 1062  docker pull trackingapp/ntsa
+ 1063  docker ps
+ 1064  docker pull trackingapp/trackingtelemetryapi:latest
+ 1065  docker pull  trackingapp/trackingreportingapi:latest
+ 1066  docker stop bf8595f1ed0b
+ 1067  cd trackingapps
+ 1068  ls
+ 1069  cd reports
+ 1070  ls
+ 1071  docker-compose up
+ 1072  cd trackingapps
+ 1073  ls
+ 1074  cd telemetry
+ 1075  ls
+ 1076  docker ps
+ 1077  docker stop 90b05b886b74
+ 1078  docker-compose up
+ 1079  docker pull trackingapp/fleet2
+ 1080  docker ps
+ 1081  cd trackingapp
+ 1082  cd trackingapps
+ 1083  ls
+ 1084  cd client
+ 1085  ls
+ 1086  cd release
+ 1087  docker ps
+ 1088  docker stop 0724e496d877
+ 1089  docker-compose up
+ 1090  docker ps
+ 1091  docker pull  trackingapp/trackingntsaapi:latest
+ 1092  docker stop 1d8e6ca92317
+ 1093  cd trackingapps
+ 1094  ls
+ 1095  cd ntsa
+ 1096  ls
+ 1097  nano docker-compose.yml
+ 1098  docker-compose up
+ 1099  cd trackingapps
+ 1100  ls
+ 1101  cd ntsaapp
+ 1102  ls
+ 1103  docker ps
+ 1104  docker pull trackingapp/ntsa:latest
+ 1105  docker stop b7823f5cbab7
+ 1106  docker-compose up
+ 1107  cd trackingapps
+ 1108  ls
+ 1109  cd ntsaapp
+ 1110  ls
+ 1111  cd..
+ 1112  cd
+ 1113  cd trackingapps
+ 1114  ls
+ 1115  mkdir ntsarelease
+ 1116  cd ntsaapp
+ 1117  ls
+ 1118  nano docker-compose.yml
+ 1119  cd
+ 1120  cd trackingapps/ntsarelease
+ 1121  nano docker-compose.yml
+ 1122  docker-compose up
+ 1123  docker pull  trackingapp/trackingntsaapi:latest
+ 1124  cd trackingapps
+ 1125  cd ntsa
+ 1126  ls
+ 1127  docker ps
+ 1128  docker stop aceec0565133
+ 1129  docker-compose up
+ 1130  cd trackingapps
+ 1131  cd ntsa
+ 1132  ls
+ 1133  docker pull  trackingapp/trackingntsaapi:latest
+ 1134  docker ps
+ 1135  docker stop 4b81a4cd8609
+ 1136  docker-compose up
+ 1137  cd trackingapps/ntsarelease
+ 1138  ls
+ 1139  nano docker-compose.yml
+ 1140  docker ps
+ 1141  docker pull trackingapp/trackingreportingapi:latest
+ 1142  docker stop 6a67d5ccd31d
+ 1143  cd trackingapps/report
+ 1144  cd trackingapps/reports
+ 1145  ls
+ 1146  docker-compose up
+ 1147  cd trackingapps
+ 1148  cd clients
+ 1149  cd client
+ 1150  ls
+ 1151  cd release
+ 1152  ls
+ 1153  docker pull trackingapp/fleet2
+ 1154  docker ps
+ 1155  docker stop d07eb62b465a
+ 1156  docker ps
+ 1157  docker stop ce6d53442c6b
+ 1158  docker ps
+ 1159  docker-compose up
+ 1160  docker ps
+ 1161  docker pull trackingapp/fleet2
+ 1162  cd trackingapps/clients/release
+ 1163  cd trackingapps/clients
+ 1164  cd trackingapps/client
+ 1165  ls
+ 1166  cd release
+ 1167  docker stop d0bc4c81c44e
+ 1168  docker-compose up
+ 1169  docker ps
+ 1170  docker pull  trackingapp/trackingadministrativeapi:latest
+ 1171  docker ps
+ 1172  cd trackingapps
+ 1173  ls
+ 1174  cd administrative
+ 1175  ls
+ 1176  docker stop 90052c85f19d
+ 1177  docker-compose up
+ 1178  docker ps
+ 1179  cd trackingapps
+ 1180  ls
+ 1181  cd ntsaapp
+ 1182  ls
+ 1183  nano docker-compose.yml
+ 1184  cd trackingapps
+ 1185  ls
+ 1186  cd ntsaapp
+ 1187  ls
+ 1188  rm docker-compose.save
+ 1189  rm docker-compose.yml.save
+ 1190  ls
+ 1191  nano docker-compose.yml
+ 1192  docker ps
+ 1193  docker stop
+ 1194  docker stop fddeb37aae0a
+ 1195  docker stop 1cc54d782aa2
+ 1196  ls
+ 1197  docker-compose up
+ 1198  docker ps
+ 1199  docker pull trackingapp/trackingntsaapi:latest
+ 1200  docker stop 8d54d61eba49
+ 1201  cd trackingapps
+ 1202  ls
+ 1203  cd ntsa
+ 1204  ls
+ 1205  docker-compose up
+ 1206  cd trackingapps
+ 1207  cd ntsa
+ 1208  ls
+ 1209  docker ps
+ 1210  docker stop 9610c1a343d8
+ 1211  docker pull  trackingapp/trackingntsaapi:latest
+ 1212  docker-compose up
+ 1213  docker ps
+ 1214  docker pull trackingapp/trackingntsaapi:latest
+ 1215  cd trackingapp
+ 1216  cd trackingapps
+ 1217  ls
+ 1218  cd ntsa
+ 1219  ls
+ 1220  docker stop ef267422cad3
+ 1221  docker ps
+ 1222  docker-compose up
+ 1223  docker ps
+ 1224  docker pull trackingapp/trackingadministrativeapi:latest
+ 1225  cd trackingapps
+ 1226  ls
+ 1227  cd administratitve
+ 1228  cd administrative
+ 1229  docker stop a89aeaa6d2f5
+ 1230  docker-compose up
+ 1231  docker ps
+ 1232  cd trackingapps
+ 1233  cd ntsa
+ 1234  ls
+ 1235  docker pull trackingapp/trackingntsaapi:latest
+ 1236  docker stop 90f895543e62
+ 1237  docker-compose up
+ 1238  docker ps
+ 1239  docker pull  trackingapp/ntsa
+ 1240  cd trackingapps
+ 1241  ls
+ 1242  cd ntsa
+ 1243  ls
+ 1244  docker pull  trackingapp/ntsa
+ 1245  docker ps
+ 1246  docker stop 88d87cbc8941
+ 1247  docker-compose up
+ 1248  docker ps
+ 1249  cd trackingapps
+ 1250  ls
+ 1251  cd ntsapp
+ 1252  cd ntsaapp
+ 1253  ls
+ 1254  docker-compose up
+ 1255  docker ps
+ 1256  cd trackingapps
+ 1257  ls
+ 1258  cd ntsarelease
+ 1259  ls
+ 1260  nano docker-compose.yml
+ 1261  docker pull trackingapp/smart
+ 1262  docker-compose up
+ 1263  docker ps
+ 1264  docker pull trackingapp/trackingtelemetryapi:latest
+ 1265  docker stop 14188d785a7a
+ 1266  cd trackingapps
+ 1267  ls
+ 1268  cd telemetry
+ 1269  ls
+ 1270  docker-compose up
+ 1271  cd trackingapps
+ 1272  ls
+ 1273  cd ntsa
+ 1274  ls
+ 1275  docker ps
+ 1276  docker pull  trackingapp/trackingntsaapi:latest
+ 1277  docker stop 56ee0688668e
+ 1278  docker-compose up
+ 1279  docker ps
+ 1280  docker stop 609998c3b45d
+ 1281  docker pull  trackingapp/ntsa:latest
+ 1282  cd trackingapps
+ 1283  cd ntsaapp
+ 1284  ls
+ 1285  docker-compose up
+ 1286  docker ps
+ 1287  docker pull trackingapp/authservicegatewayapi:latest
+ 1288  cd trackingapps
+ 1289  ls
+ 1290  cd auth
+ 1291  ls
+ 1292  docker stop bd895133fc81
+ 1293  docker-compose up
+ 1294  docker ps
+ 1295  docker pull trackingapp/portalgatewayapi:latest
+ 1296  cd trackingapps
+ 1297  ls
+ 1298  cd portal
+ 1299  ls
+ netstat -tupn | grep -E ":(5050) .*"
+ 1300  docker stop 920677e28b40
+ 1301  docker-compose up
+ 1302  docker ps
+ 1303  docker pull  trackingapp/trackingadministrativeapi:latest
+ 1304  cd trackingapp
+ 1305  cd trackingapps
+ 1306  ls
+ 1307  cd administrative
+ 1308  ls
+ 1309  docker stop 3776f80b0766
+ 1310  docker-compose up
+ 1311  docker ps
+ 1312  docker pull  trackingapp/trackingadministrativeapi
+ 1313  docker pull trackingapp/trackingtelemetryapi:latest
+ 1314  docker stop ed000bd7f32b
+ 1315  cd trackingapps
+ 1316  ls
+ 1317  cd telemetry
+ 1318  ls
+ 1319  docker-compose up
+ 1320  docker ps
+ 1321  docker pull trackingapp/portalgatewayapi
+ 1322  cd trackingapps
+ 1323  cd portal
+ 1324  docker stop 70c3db3bbb2a
+ 1325  ls
+ 1326  docker-compose up
+ 1327  docker ps
+ 1328  docker pull trackingapp/trackingtelemetryapi:latest
+ 1329  cd trackingapps
+ 1330  ls
+ 1331  cd telemetry
+ 1332  ls
+ 1333  docker stop dab33d45101c
+ 1334  docker-compose up
+ 1335  docker ps
+ 1336  docker pull trackingapp/portalgatewayapi
+ 1337  cd trackingapp
+ 1338  cd trackingapps
+ 1339  ls
+ 1340  cd portal
+ 1341  docker stop 519b13158af3
+ 1342  docker-compose up
+ 1343  cd trackingapps
+ 1344  ls
+ 1345  cd client
+ 1346  ls
+ 1347  nano docker-compose.yml
+ 1348  docker pull trackingapp/fleet0
+ 1349  docker-compose up
+ 1350  docker ps
+ 1351  cd trackingapps
+ 1352  ls
+ 1353  cd client
+ 1354  cd release
+ 1355  ls
+ 1356  nano docker-compose.yml
+ 1357  docker stop c4a7ae5e33a7
+ 1358  docker-compose up
+ 1359  docker pull trackingapp/fleet0
+ 1360  cd trackingapps
+ 1361  ls
+ 1362  cd client
+ 1363  ls
+ 1364  cd release
+ 1365  ls
+ 1366  docker ps
+ 1367  docker stop 45e44b9eed7b
+ 1368  docker-compose up
+ 1369  docker ps
+ 1370  cd trackingapps
+ 1371  ls
+ 1372  cd client
+ 1373  ls
+ 1374  cd release
+ 1375  ls
+ 1376  nano docker-compose.yml
+ 1377  cd trackingapps
+ 1378  ls
+ 1379  cd portal
+ 1380  ls
+ 1381  docker ps
+ 1382  docker stop f1c37a8a991c
+ 1383  pull trackingapp/portalgatewayapi:latest
+ 1384  docker pull trackingapp/portalgatewayapi:latest
+ 1385  docker stop f1c37a8a991c
+ 1386  docker ps
+ 1387  docker-compose up
+ 1388  cd trackingapps
+ 1389  cd portal
+ 1390  docker ps
+ 1391  docker pull trackingapp/portalgatewayapi
+ 1392  docker stop 91c01e4b6d96
+ 1393  docker-compose up
+ 1394  pull trackingapp/portalgatewayapi:latest
+ 1395  docker pull trackingapp/portalgatewayapi:latest
+ 1396  cd trackingapps
+ 1397  ls
+ 1398  cd portal
+ 1399  docker ps
+ 1400  docker stop f1c37a8a991c
+ 1401  docker-compose up
+ 1402  cd trackingapps
+ 1403  ls
+ 1404  cd client
+ 1405  ls
+ 1406  cd..
+ 1407  ccd
+ 1408  cd
+ 1409  cd trackingapps
+ 1410  cd reports
+ 1411  ls
+ 1412  docker ps
+ 1413  docker pull trackingapp/trackingreportingapi
+ 1414  cd trackingapps
+ 1415  ls
+ 1416  cd reports
+ 1417  ls
+ 1418  docker ps
+ 1419  docker pull trackingapp/trackingreportingapi
+ 1420  docker stop 64775b9ef5c8
+ 1421  docker-compose up
+ 1422  cd trackingapps
+ 1423  ls
+ 1424  cd portal
+ 1425  ls
+ 1426  docker ps
+ 1427  docker pull  trackingapp/portalgatewayapi
+ 1428  ls
+ 1429  cd trackingapps
+ 1430  ls
+ 1431  cd ntsaapp
+ 1432  ls
+ 1433  docker nano docker-compose.yml
+ 1434  nano docker-compose.yml
+ 1435  docker pull  trackingapp/ntsa
+ 1436  docker ps
+ 1437  docker stop 7f2e4d1c5b62
+ 1438  docker-compose up
+ 1439  docker ps
+ 1440  docker pull trackingapp/trackingadministrativeapi
+ 1441  cd trackingapps/administrative
+ 1442  ls
+ 1443  docker stop eadf50753c9f
+ 1444  docker-compose up
+ 1445  docker ps
+ 1446  docker pull trackingapp/trackingntsaapi
+ 1447  docker stop 6e5b43e3393a
+ 1448  cd trackingapps
+ 1449  ls
+ 1450  cd ntsa
+ 1451  ls
+ 1452  docker-compose up
+ 1453  docker ps
+ 1454  docker pull trackingapp/trackingtelemetryapi
+ 1455  cd trackingapps
+ 1456  ls
+ 1457  cd telemetry
+ 1458  ls
+ 1459  docker stop ed000bd7f32b
+ 1460  docker-compose up
+ 1461  cd trackingapps
+ 1462  cd
+ 1463  ls
+ 1464  cd trackingapps
+ 1465  ls
+ 1466  cd reports
+ 1467  ls
+ 1468  docker-compose up
+ 1469  cd trackingapps
+ 1470  ls
+ 1471  cd ntsaapp
+ 1472  ls
+ 1473  docker ps
+ 1474  cd
+ 1475  cd trackingapps
+ 1476  cd client
+ 1477  cd release
+ 1478  nano docker-compose up
+ 1479  ls
+ 1480  nano docker-compose.yml
+ 1481  docker pull trackingapp/fleet2
+ 1482  docker ps
+ 1483  docker stop ec914267f1c5
+ 1484  docker-compose up
+ 1485  cd trackingapps
+ 1486  ls
+ 1487  cd reports
+ 1488  ls
+ 1489  docker ps
+ 1490  docker stop 7247822104b7
+ 1491  docker pull  trackingapp/trackingreportingapi
+ 1492  cd trackingapps
+ 1493  ls
+ 1494  cd adminnistrative
+ 1495  cd adminstrative
+ 1496  cd administrative
+ 1497  l
+ 1498  ls
+ 1499  docker ps
+ 1500  docker pull trackingapp/trackingadministrativeapi
+ 1501  docker stop aea5415d812c
+ 1502  docker-compose up
+ 1503  docker ps
+ 1504  docker pull  trackingapp/trackingreportingapi
+ 1505  docker ps
+ 1506  docker stop d52a274da635
+ 1507  docker ps
+ 1508  cd trackingapps
+ 1509  ls
+ 1510  cd reports
+ 1511  ls
+ 1512  docker-compose up
+ 1513  docker ps
+ 1514  cd trackingapp
+ 1515  cd trackingapps
+ 1516  ls
+ 1517  cd client
+ 1518  ls
+ 1519  cd release
+ 1520  ls
+ 1521  docker pull trackingapp/fleet2
+ 1522  docker stop bdea5168029a
+ 1523  docker-compose up
+ 1524  docker ps
+ 1525  docker pull trackingapp/trackingtelemetryapi
+ 1526  cd trackingapps
+ 1527  ls
+ 1528  cd telemetry
+ 1529  ls
+ 1530  docker stop b829bb716ce9
+ 1531  docker-compose up
+ 1532  docker ps
+ 1533  docker pull trackingapp/trackingadministrativeapi
+ 1534  cd trackingapps
+ 1535  ls
+ 1536  cd administrative
+ 1537  ls
+ 1538  docker stop ee4da16342a3
+ 1539  docker-compose up
+ 1540  ls
+ 1541  cd trackingapps
+ 1542  ls
+ 1543  client
+ 1544  cd client
+ 1545  cd release
+ 1546  ls
+ 1547  nano docker-compose up
+ 1548  nano docker-compose.yml
+ 1549  docker ps
+ 1550  docker stop 6a29b692e49c
+ 1551  docker pull trackingapp/fleet2
+ 1552  docker-compose up
+ 1553  docker ps
+ 1554  docker pull trackingapp/fleet2
+ 1555  docker ps
+ 1556  docke~r~ stop 2d6b3e11b6be
+ 1557  docker stop 2d6b3e11b6be
+ 1558  cd trackingapps
+ 1559  ls
+ 1560  cd client
+ 1561  ls
+ 1562  cd release
+ 1563  ls
+ 1564  docker-compose up
+ 1565  docker ps
+ 1566  docker pull  trackingapp/trackingreportingapi
+ 1567  cd trackingapps
+ 1568  ls
+ 1569  cd reports
+ 1570  ls
+ 1571  docker stop e65972453923
+ 1572  docker-compose up
+ 1573  docker ps
+ 1574  docker pull trackingapp/trackingtelemetryapi
+ 1575  docker stop bd5605caa567
+ 1576  cd trackingapps
+ 1577  ls
+ 1578  cd telemetry
+ 1579  ls
+ 1580  docker-compose up
+ 1581  ls
+ 1582  cd trackingapps
+ 1583  ls
+ 1584  cd client
+ 1585  ls
+ 1586  cd release
+ 1587  ls
+ 1588  docker ps
+ 1589  docker pull trackingapp/fleet2
+ 1590  docker stop 44a6f0f10aa7
+ 1591  docker-compose up
+ 1592  docker ps
+ 1593  docker pull trackingapp/authservicegatewayapi
+ 1594  cd trackingapps
+ 1595  ls
+ 1596  cd auth
+ 1597  ls
+ 1598  docker stop 64d1cbeca013
+ 1599  docker-compose up
+ 1600  docker ps
+ 1601  docker pull  trackingapp/authservicegatewayapi
+ 1602  docker ps
+ 1603  cd trackingapps
+ 1604  ls
+ 1605  cd auth
+ 1606  ls
+ 1607  docker stop dde2e2b4985b
+ 1608  docker-compose up
+ 1609  docker ps
+ 1610  cd trackingapps
+ 1611  cd auth
+ 1612  ls
+ 1613  docker ps
+ 1614  docker pull trackingapp/authservicegatewayapi
+ 1615  docker stop 753f4c38dbb9
+ 1616  docker-compose up
+ 1617  docker pull trackingapp/authservicegatewayapi
+ 1618  docker ps
+ 1619  cd trackingapps
+ 1620  ls
+ 1621  cd auth
+ 1622  ls
+ 1623  docker stop a7a5e2126c9a
+ 1624  docker-compose up
+ 1625  cd trackingapps
+ 1626  ls
+ 1627  cd administrative
+ 1628  ls
+ 1629  docker ps
+ 1630  docker pull trackingapp/trackingadministrativeapi
+ 1631  docker stop 58536754c6cf
+ 1632  docker-compose up
+ 1633  docker pull trackingapp/trackingadministrativeapi
+ 1634  cd trackingapps
+ 1635  ls
+ 1636  cd administrative
+ 1637  ls
+ 1638  docker ps
+ 1639  docker stop f4ee51b8654a
+ 1640  docker-compose up
+ 1641  cd administrative
+ 1642  cd trackingapps
+ 1643  ls
+ 1644  cd administrative
+ 1645  ls
+ 1646  docker ps
+ 1647  docker pull
+ 1648  docker pull trackingapp/trackingadministrativeapi
+ 1649  docker stop 847f1f0785bb
+ 1650  docker-compose up
+ 1651  timedatectl
+ 1652  docker ps
+ 1653  docker pull trackingapp/ntsa
+ 1654  docker pull trackingapp/trackingntsaapi
+ 1655  cd trackingapps
+ 1656  ls
+ 1657  cd ntsa
+ 1658  ls
+ 1659  nano docker-compose.yml
+ 1660  docker stop 3dde011c385d
+ 1661  docker-compose up
+ 1662  cd trackingapps
+ 1663  ls
+ 1664  cd ntsa
+ 1665  ls
+ 1666  docker ps
+ 1667  docker pull trackingapp/trackingntsaapi
+ 1668  docker stop 4c0c1a2cf884
+ 1669  docker-compose up
+ 1670  docker pull trackingapp/trackingntsaapi
+ 1671  cd trackingapp
+ 1672  cd trackingapps
+ 1673  ls
+ 1674  cd ntsa
+ 1675  docker ps
+ 1676  docker stop 45dc87a56673
+ 1677  docker-compose up
+ 1678  docker pull trackingapp/trackingntsaapi
+ 1679  docker ps
+ 1680  cd trackingapps
+ 1681  ls
+ 1682  cd ntsa
+ 1683  ls
+ 1684  nano docker-compose.yml
+ 1685  docker stop b30999352d02
+ 1686  docker-compose up
+ 1687  docker ps
+ 1688  docker stop c9af3399f040
+ 1689  docker image prune -a
+ 1690  docker container prune
+ 1691  docker run -d   -v /var/run/docker.sock:/var/run/docker.sock   -v $PWD/traefik.toml:/traefik.toml   -v $PWD/traefik_dynamic.toml:/traefik_dynamic.toml   -v $PWD/acme.json:/acme.json   -p 80:80   -p 443:443   --network web   --name traefik   traefik:v2.2
+ 1692  docker ps
+ 1693  cd trackingapps
+ 1694  ls
+ 1695  cd
+ 1696  docker-compose up -d
+ 1697  ls
+ 1698  cd tracking
+ 1699  ls
+ 1700  cd test
+ 1701  ls
+ 1702  nano docker-compose.yml
+ 1703  ls
+ 1704  cd..
+ 1705  cd
+ 1706  nano traefik.toml
+ 1707  docker run -d   -v /var/run/docker.sock:/var/run/docker.sock   -v $PWD/traefik.toml:/traefik.toml   -v $PWD/traefik_dynamic.toml:/traefik_dynamic.toml   -v $PWD/acme.json:/acme.json   -p 80:80   -p 443:443   --network web   --name traefik   traefik:v2.2
+ 1708  docker ps
+ 1709  docker stop bc6f041345e4
+ 1710  docker run -d   -v /var/run/docker.sock:/var/run/docker.sock   -v $PWD/traefik.toml:/traefik.toml   -v $PWD/traefik_dynamic.toml:/traefik_dynamic.toml   -v $PWD/acme.json:/acme.json   -p 80:80   -p 443:443   --network web   --name traefik   traefik:v2.2
+ 1711  docker ps
+ 1712  docker container prune
+ 1713  docker run -d   -v /var/run/docker.sock:/var/run/docker.sock   -v $PWD/traefik.toml:/traefik.toml   -v $PWD/traefik_dynamic.toml:/traefik_dynamic.toml   -v $PWD/acme.json:/acme.json   -p 80:80   -p 443:443   --network web   --name traefik   traefik:v2.2
+ 1714  docker ps
+ 1715  cd trackingapps
+ 1716  ls
+ 1717  cd
+ 1718  ls
+ 1719  docker ps
+ 1720  docker stop e9d75efb1068
+ 1721  ls
+ 1722  nano traefik.toml
+ 1723  nano traefik_dynamic.toml
+ 1724  ls
+ 1725  nano docker-compose-web.yml
+ 1726  docker network create web
+ 1727  ls
+ 1728  nano acme.json
+ 1729  chmod 600 acme.json
+ 1730  docker ps
+ 1731  docker run -d   -v /var/run/docker.sock:/var/run/docker.sock   -v $PWD/traefik.toml:/traefik.toml   -v $PWD/traefik_dynamic.toml:/traefik_dynamic.toml   -v $PWD/acme.json:/acme.json   -p 80:80   -p 443:443   --network web   --name traefik   traefik:v2.2
+ 1732  docker ps
+ 1733  docker ps -a
+ 1734  docker stop e9d75efb1068
+ 1735  docker container prune
+ 1736  docker ps -a
+ 1737  docker run -d   -v /var/run/docker.sock:/var/run/docker.sock   -v $PWD/traefik.toml:/traefik.toml   -v $PWD/traefik_dynamic.toml:/traefik_dynamic.toml   -v $PWD/acme.json:/acme.json   -p 80:80   -p 443:443   --network web   --name traefik   traefik:v2.2
+ 1738  docker ps -a
+ 1739  docker ps
+ 1740  docker pull  trackingapp/trackingreportingapi
+ 1741  docker pull trackingapp/trackingadministrativeapi
+ 1742  docker pull trackingapp/trackingtelemetryapi
+ 1743  cd trackingapps
+ 1744  ls
+ 1745  cd telemetry
+ 1746  ls
+ 1747  docker ps
+ 1748  docker stop e8a9a2b02feb
+ 1749  docker-compose up
+ 1750  docker ps
+ 1751  cd trackingapps
+ 1752  cd administrative
+ 1753  ls
+ 1754  doocker stop bfcf3856c075
+ 1755  docker stop bfcf3856c075
+ 1756  docker-compose up
+ 1757  cd trackingapps
+ 1758  ls
+ 1759  cd reports
+ 1760  ls
+ 1761  docker ps
+ 1762  docker stop b8c686d0f51f
+ 1763  docker-compose up
+ 1764  docker ps
+ 1765  docker pull  trackingapp/portalgatewayapi
+ 1766  docker stop bf6f4140d5d2
+ 1767  cd trackingapps
+ 1768  cd portal
+ 1769  ls
+ 1770  docker-compose up
+ 1771  docker ps
+ 1772  docker pull trackingapp/trackingreportingapi
+ 1773  docker stop 337b6a0e9cf3
+ 1774  cd trackingapps
+ 1775  ls
+ 1776  cd reports
+ 1777  ls
+ 1778  docker-compose up
+ 1779  cd trackingapps
+ 1780  ls
+ 1781  cd reports
+ 1782  ls
+ 1783  docker ps
+ 1784  docker pull  trackingapp/trackingreportingapi
+ 1785  docker stop 052085373ee4
+ 1786  cd trackingapps
+ 1787  ls
+ 1788  cd reports
+ 1789  ls
+ 1790  docker-compose up
+ 1791  docker ps
+ 1792  docker pull  trackingapp/trackingreportingapi
+ 1793  cd trackingapps
+ 1794  ls
+ 1795  cd reports
+ 1796  docker stop 51cfa142de26
+ 1797  docker-compose up
+ 1798  ls
+ 1799  cd trackinaggps
+ 1800  cd trackingapps
+ 1801  ls
+ 1802  cd administrative
+ 1803  ls
+ 1804  docker ps
+ 1805  docker pull trackingapp/trackingadministrativeapi
+ 1806  docker stop 17800c435a0a
+ 1807  ls
+ 1808  docker-compose up
+ 1809  cd trackingapps
+ 1810  ls
+ 1811  cd trackingapps
+ 1812  ls
+ 1813  cd auth
+ 1814  ls
+ 1815  docker ps
+ 1816  docker pull  trackingapp/authservicegatewayapi
+ 1817  docker stop 7a7e4afa4347
+ 1818  docker-compose up
+ 1819  docker ps
+ 1820  docker pull trackingapp/fleet2
+ 1821  cd trackingapp
+ 1822  cd trackingapps
+ 1823  ls
+ 1824  cd client
+ 1825  cd release
+ 1826  ls
+ 1827  docker stop 08ac89d64868
+ 1828  docker-compose up
+ 1829  docker ps
+ 1830  docker pull trackingapp/trackingadministrativeapi
+ 1831  docker stop 6aaec4d93d41
+ 1832  cd trackingapps
+ 1833  ls
+ 1834  cd administrative
+ 1835  ls
+ 1836  docker-compose up
+ 1837  docker ps
+ 1838  cd trackingapps
+ 1839  cd telemetry
+ 1840  ls
+ 1841  docker ps
+ 1842  docker stop 74f2638502f4
+ 1843  docker pull  trackingapp/trackingtelemetryapi
+ 1844  docker-compose up
+ 1845  cd trackingapps
+ 1846  ls
+ 1847  cd administrative
+ 1848  ls
+ 1849  docker ps
+ 1850  docker pull  trackingapp/trackingadministrativeapi
+ 1851  cd
+ 1852  cd trackingapps
+ 1853  cd reporting
+ 1854  ls
+ 1855  cd reports
+ 1856  docker pull  trackingapp/trackingreportingapi
+ 1857  docker ps
+ 1858  docker stop 20cf9d350c3f
+ 1859  docker-compose up
+ 1860  cd trackingapps
+ 1861  ls
+ 1862  cd administrative
+ 1863  ls
+ 1864  docker ps
+ 1865  docker pull trackingapp/trackingadministrativeapi
+ 1866  docker stop 6a6ce1a7b44f
+ 1867  docker-compose up
+ 1868  cd trackingapps
+ 1869  ls
+ 1870  cd client
+ 1871  ls
+ 1872  cd release
+ 1873  ls
+ 1874  docker pull trackingapps/fleet2
+ 1875  docker pull trackingapp/fleet2
+ 1876  docker ps
+ 1877  docker stop a2d1f85d950e
+ 1878  docker-compose up
+ 1879  cd trackingapps
+ 1880  ls
+ 1881  cd release
+ 1882  cd reports
+ 1883  ls
+ 1884  docker ps
+ 1885  docker pull  trackingapp/trackingreportingapi
+ 1886  docker stop 1fd0ed8a447b
+ 1887  docker-compose up
+ 1888  docker ps
+ 1889  ls
+ 1890  nano acme.json
+ 1891  nano traefik.toml
+ 1892  nano traefik_dynamic.toml
+ 1893  nano docker-compose-web.yml
+ 1894  cd trackingapps
+ 1895  ls
+ 1896  cd auth
+ 1897  ls
+ 1898  nano docker-compose.yml
+ 1899  cd
+ 1900  mkdir riverlong
+ 1901  ls
+ 1902  cd riverlong
+ 1903  ls
+ 1904  cd riverlong
+ 1905  ls
+ 1906  mkdir auth
+ 1907  cd auth
+ 1908  nano docker-compose.yml
+ 1909  ls
+ 1910  nano docker-compose.yml
+ 1911  cd
+ 1912  cd trackingapps
+ 1913  ls
+ 1914  cd auth
+ 1915  ls
+ 1916  nano docker-compose.yml
+ 1917  cd
+ 1918  cd trackingapps
+ 1919  ls
+ 1920  cd
+ 1921  cd riverlong
+ 1922  ls
+ 1923  cd auth
+ 1924  nano docker-compose.yml
+ 1925  ls
+ 1926  nano docker-compose.yml
+ 1927  docker compose up
+ 1928  docker-compose up
+ 1929  cd trackinaggps
+ 1930  cd trackingapps
+ 1931  ls
+ 1932  cd auth
+ 1933  ls
+ 1934  docker-compose up
+ 1935  docker run -d   -v /var/run/docker.sock:/var/run/docker.sock   -v $PWD/traefik.toml:/traefik.toml   -v $PWD/traefik_dynamic.toml:/traefik_dynamic.toml   -v $PWD/acme.json:/acme.json   -p 80:80   -p 443:443   --network web   --name traefik   traefik:v2.2
+ 1936  docker ps
+ 1937  docker rm -f $(docker ps -a -q)
+ 1938  docker volume rm $(docker volume ls -q)
+ 1939  docker run -d   -v /var/run/docker.sock:/var/run/docker.sock   -v $PWD/traefik.toml:/traefik.toml   -v $PWD/traefik_dynamic.toml:/traefik_dynamic.toml   -v $PWD/acme.json:/acme.json   -p 80:80   -p 443:443   --network web   --name traefik   traefik:v2.2
+ 1940  docker rm -f $(docker ps -a -q)
+ 1941  docker volume rm $(docker volume ls -q)
+ 1942  docker ps
+ 1943  docker run -d   -v /var/run/docker.sock:/var/run/docker.sock   -v $PWD/traefik.toml:/traefik.toml   -v $PWD/traefik_dynamic.toml:/traefik_dynamic.toml   -v $PWD/acme.json:/acme.json   -p 80:80   -p 443:443   --network web   --name traefik   traefik:v2.2
+ 1944  docker rm -f $(docker ps -a -q)
+ 1945  docker ps
+ 1946  docker run -d   -v /var/run/docker.sock:/var/run/docker.sock   -v $PWD/traefik.toml:/traefik.toml   -v $PWD/traefik_dynamic.toml:/traefik_dynamic.toml   -v $PWD/acme.json:/acme.json   -p 80:80   -p 443:443   --network web   --name traefik   traefik:v2.2
+ 1947  docker rm -f $(docker ps -a -q)
+ 1948  docker ps
+ 1949  docker run -d   -v /var/run/docker.sock:/var/run/docker.sock   -v $PWD/traefik.toml:/traefik.toml   -v $PWD/traefik_dynamic.toml:/traefik_dynamic.toml   -v $PWD/acme.json:/acme.json   -p 80:80   -p 443:443   --network web   --name traefik   traefik:v2.2
+ 1950  docker rm -f $(docker ps -aq)
+ 1951  docker volume rm $(docker volume ls -q)
+ 1952  sudo lsof -i -P -n | grep 80
+ 1953  sudo kill 263
+ 1954  sudo kill 264
+ 1955  sudo lsof -i -P -n | grep 80
+ 1956  docker run -d   -v /var/run/docker.sock:/var/run/docker.sock   -v $PWD/traefik.toml:/traefik.toml   -v $PWD/traefik_dynamic.toml:/traefik_dynamic.toml   -v $PWD/acme.json:/acme.json   -p 80:80   -p 443:443   --network web   --name traefik   traefik:v2.2
+ 1957  docker ps
+ 1958  cd trackingapps
+ 1959  ls
+ 1960  cd auth
+ 1961  docker-compose up
+ 1962  cd trackingapps
+ 1963  ls
+ 1964  cd administrative
+ 1965  ls
+ 1966  docker-compose up
+ 1967  trackingapps
+ 1968  cd trackingapp
+ 1969  cd trackingapps
+ 1970  ls
+ 1971  cd portal
+ 1972  ls
+ 1973  docker-compose up
+ 1974  cd trackingapps
+ 1975  ls
+ 1976  cd telemetry
+ 1977  ls
+ 1978  docker-compose up
+ 1979  cd tracking apps
+ 1980  cd trackingapps
+ 1981  ls
+ 1982  docker-compose up
+ 1983  cd trackingapps
+ 1984  ls
+ 1985  cd client
+ 1986  ls
+ 1987  cd release
+ 1988  ls
+ 1989  docker-compose up
+ 1990  cd trackingapps
+ 1991  ls
+ 1992  cd ntsaapp
+ 1993  ls
+ 1994  docker-compose up
+ 1995  history
+   349  sudo apt update
+  350  sudo apt install apt-transport-https ca-certificates curl software-properties-common
+  351  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  352  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+  353  apt-cache policy docker-ce
+  354  sudo apt install docker-ce
+  355  sudo systemctl status docker
+  356  docker ps
+  357  sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  358  sudo chmod +x /usr/local/bin/docker-compose
+  359  docker-compose --version
+  360  docker run -it --rm --shm-size=1g   -e PBF_URL=https://download.geofabrik.de/africa/kenya-latest.osm.pbf   -e REPLICATION_URL=https://download.geofabrik.de/africa/kenya-updates/   -e IMPORT_WIKIPEDIA=false   -e NOMINATIM_PASSWORD=very_secure_password   -v nominatim-data:/var/lib/postgresql/12/main   -p 8080:8080   --name nominatim \
+  361  tail -f /opt/traccar/logs/tracker-server.log
+  362  systemctl stop messagebroker
+  363  tail -f /opt/traccar/logs/tracker-server.log
+  docker run -it --rm --shm-size=1g   -e PBF_URL=https://download.geofabrik.de/africa/kenya-latest.osm.pbf   -e REPLICATION_URL=https://download.geofabrik.de/africa/kenya-updates/   -e IMPORT_WIKIPEDIA=false   -e NOMINATIM_PASSWORD=PASSWORD   -v nominatim-data:/var/lib/postgresql/12/main   -p 8080:8080   --name nominatim   mediagis/nominatim:3.6
+  
+  
+
+  docker run -it --rm --shm-size=1g   -e PBF_URL=https://download.geofabrik.de/africa/kenya-latest.osm.pbf   -e REPLICATION_URL=https://download.geofabrik.de/africa/kenya-updates/   -e IMPORT_WIKIPEDIA=false   -e NOMINATIM_PASSWORD=PASSWORD   -v nominatim-data:/var/lib/postgresql/12/main   -p 8080:8080   --name nominatim   mediagis/nominatim:3.6
